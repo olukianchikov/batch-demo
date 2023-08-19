@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "namespace": "lego",
+  "name": "Price",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "price",
+      "type": {
+        "type": "string",
+        "java-class": "java.math.BigDecimal"
+      }
+    },
+    {
+      "name": "currency",
+      "type": "string"
+    }
+  ]
+}

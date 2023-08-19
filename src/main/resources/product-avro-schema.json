@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "namespace": "lego",
+  "name": "Product",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "stock",
+      "type": "int"
+    },
+    {
+      "name": "created",
+      "type": {
+        "type": "long",
+        "logicalType": "local-timestamp-millis"
+      }
+    },
+    {
+      "name": "updated",
+      "type": {
+        "type": "long",
+        "logicalType": "local-timestamp-millis"
+      }
+    }
+  ]
+}
