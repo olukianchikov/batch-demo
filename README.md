@@ -75,7 +75,7 @@ To send a request to the processor to execute the job for the `Product`s data, r
 curl --location --request POST 'http://localhost:8080/api/v1/products?filepath=PATH_TO_FILE'
 ```
 
-where `PATH_TO_FILE` is local filesystem path to a csv file.
+where `PATH_TO_FILE` is local filesystem path to a *csv* file.
 
 To send a request to the processor to execute the job for the `Price`s data, run:
 
@@ -83,7 +83,7 @@ To send a request to the processor to execute the job for the `Price`s data, run
 curl --location --request POST 'http://localhost:8080/api/v1/prices?filepath=PATH_TO_FILE'
 ```
 
-where `PATH_TO_FILE` is local filesystem path to a csv file.
+where `PATH_TO_FILE` is local filesystem path to a *json* file.
 
 Note that executing processing on the same file more than once will be prevented.
 
