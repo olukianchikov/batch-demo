@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Locale;
 
 public class DataTypeUtil {
 
@@ -39,7 +40,7 @@ public class DataTypeUtil {
 
     static LocalDateTime getDateTimeFromString(String input, String[] formats) {
         for (String format : formats) {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format, Locale.ENGLISH);
             try {
                 return LocalDateTime.parse(input, formatter);
             } catch (DateTimeParseException ignored) {
