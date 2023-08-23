@@ -57,7 +57,7 @@ tests and launch application locally:
 
 To build and run tests, execute the following:
 
-```bash
+```shell
 ./gradlew build
 ```
 
@@ -65,13 +65,13 @@ This will produce a `.jar` file in `/build/libs/`
 
 To execute, run:
 
-```bash
+```shell
 ./gradlew bootRun
 ```
 
 To send a request to the processor to execute the job for the `Product`s data, run:
 
-```bash
+```shell
 curl --location --request POST 'http://localhost:8080/api/v1/products?filepath=PATH_TO_FILE'
 ```
 
@@ -79,7 +79,7 @@ where `PATH_TO_FILE` is local filesystem path to a *csv* file.
 
 To send a request to the processor to execute the job for the `Price`s data, run:
 
-```bash
+```shell
 curl --location --request POST 'http://localhost:8080/api/v1/prices?filepath=PATH_TO_FILE'
 ```
 
@@ -87,3 +87,10 @@ where `PATH_TO_FILE` is local filesystem path to a *json* file.
 
 Note that executing processing on the same file more than once will be prevented.
 
+
+#### Verifying result
+To read avro files, download `avro-tools` jar file ([link to maven repository](https://mvnrepository.com/artifact/org.apache.avro/avro-tools/1.10.2)).
+Then execute the following command to read the file:
+```shell
+java -jar $AVRO_TOOLS_JAR tojson $FILE
+```
